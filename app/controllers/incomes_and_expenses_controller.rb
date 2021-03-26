@@ -1,7 +1,7 @@
 class IncomesAndExpensesController < ApplicationController
   def new
-    @income_and_expense = Income_And_Expense.new
-    
+    @income = Income.new
+    @exprese = Exprese.new
   end
 
   def show

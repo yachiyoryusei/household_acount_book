@@ -1,0 +1,58 @@
+<%= form_for (@income) do |form| %>
+    
+    <% if income.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize( income.errors.count, "error") %> prohibited this book from being saved:</h2>
+  
+        <ul>
+          <%=  @income.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :income %>
+      <%= form.text_field :income %>
+    </div>
+
+    <div class="field">
+      <%= form.label :income %>
+      <%= form.text_field :income %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit%>
+    </div>
+<% end %>
+
+<%= form_for @exprese do |form| %>
+    
+    <% if exprese.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize( exprese.errors.count, "error") %> prohibited this book from being saved:</h2>
+  
+        <ul>
+          <%=  @exprese.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :income %>
+      <%= form.text_field :income %>
+    </div>
+
+    <div class="field">
+      <%= form.label :income %>
+      <%= form.text_field :income %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit%>
+    </div>
+<% end %>
+
