@@ -1,2 +1,7 @@
-<h1>Budgets#index</h1>
-<p>Find me in app/views/budgets/index.html.erb</p>
+<%= @budgets.each do |budget| %>
+    <p><%= budget.price %></p>
+    <p><%= budget.month %></p>
+    <p><%= budget.user_id %></p>
+<% end %>
+
+<%= link_to '新規入力', budgets_new_path %>

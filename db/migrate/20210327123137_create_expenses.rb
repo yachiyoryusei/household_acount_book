@@ -1,6 +1,6 @@
-class CreateIncomeAndExpenses < ActiveRecord::Migration[6.1]
+class CreateExpenses < ActiveRecord::Migration[6.1]
   def change
-    create_table :income_and_expenses do |t|
+    create_table :expenses do |t|
       t.integer :price
       t.date :expense_date
       t.integer :user_id

@@ -1,2 +1,10 @@
-<h1>IncomesAndExpenses#edit</h1>
-<p>Find me in app/views/incomes_and_expenses/edit.html.erb</p>
+<h1>Editing Book</h1>
+
+<%= render 'form', Income: @income %>
+
+<%= link_to 'Show', @income %> |
+
+<%= render 'form', Expense: @expense %>
+
+<%= link_to 'Show', @expense %> |
+<%= link_to 'Back', incomes_and_expenses_index_path %>

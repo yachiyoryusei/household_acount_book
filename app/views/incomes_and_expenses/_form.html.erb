@@ -1,8 +1,8 @@
-<%= form_for (@income) do |form| %>
+<%= form_for @income, url: incomes_and_expenses_new_path do |form| %>
     
-    <% if income.errors.any? %>
+    <% if @income.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize( income.errors.count, "error") %> prohibited this book from being saved:</h2>
+        <h2><%= pluralize( @income.errors.count, "error") %> prohibited this book from being saved:</h2>
   
         <ul>
           <%=  @income.errors.full_messages.each do |message| %>
@@ -13,13 +13,18 @@
     <% end %>
   
     <div class="field">
-      <%= form.label :income %>
-      <%= form.text_field :income %>
-    </div>
-
-    <div class="field">
-      <%= form.label :income %>
-      <%= form.text_field :income %>
+    <p>
+      <%= form.label :price %>
+      <%= form.text_field :price %>
+    </p>
+    <p>
+      <%= form.label :expense_date %>
+      <%= form.text_field :expense_date%>
+    </p>
+    <p>
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id %>
+    </p>
     </div>
   
     <div class="actions">
@@ -27,14 +32,14 @@
     </div>
 <% end %>
 
-<%= form_for @exprese do |form| %>
+<%= form_for @expense, url: incomes_and_expenses_new_path do |form| %>
     
-    <% if exprese.errors.any? %>
+    <% if @expense.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize( exprese.errors.count, "error") %> prohibited this book from being saved:</h2>
+        <h2><%= pluralize( @expense.errors.count, "error") %> prohibited this book from being saved:</h2>
   
         <ul>
-          <%=  @exprese.errors.full_messages.each do |message| %>
+          <%=  @expense.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
         </ul>
@@ -42,13 +47,18 @@
     <% end %>
   
     <div class="field">
-      <%= form.label :income %>
-      <%= form.text_field :income %>
-    </div>
-
-    <div class="field">
-      <%= form.label :income %>
-      <%= form.text_field :income %>
+    <p>
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </p>
+  <p>
+    <%= form.label :expense_date %>
+    <%= form.text_field :expense_date%>
+  </p>
+  <p>
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </p>
     </div>
   
     <div class="actions">

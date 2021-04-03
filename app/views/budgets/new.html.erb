@@ -1,2 +1,19 @@
-<h1>Budgets#new</h1>
-<p>Find me in app/views/budgets/new.html.erb</p>
+<%= form_for @budget do |form| %>
+    <p>
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+    </p>
+
+    <p>
+    <%= form.label :month %>
+    <%= form.text_field :month %>
+    </p>
+
+    <p>
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id%>
+    </p>
+
+    <%= form.submit %>
+
+<% end %>
